@@ -1,0 +1,21 @@
+/* Primary CTA */
+.ha-bg-black {
+    background-color: #111827;
+    color: #ffffff;
+    opacity: 1;
+    visibility: visible;
+}
+
+.ha-bg-black:hover {
+    background-color: #000000;
+}
+
+/* Pointer helper */
+.pointer {
+    cursor: pointer;
+}
+
+/* Connect links */
+.connect-grid a {
+    color: #000000;
+}

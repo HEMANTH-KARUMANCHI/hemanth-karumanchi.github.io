@@ -1,0 +1,199 @@
+/* CONNECT OVERLAY */
+.connect-overlay {
+    position: fixed;
+    inset: 0;
+    background: #ffffff;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.connect-grid {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+}
+
+.connect-grid a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+    font-weight: 500;
+    text-decoration: underline;
+    border: 1px solid #e5e5e5;
+}
+
+.connect-grid a:hover {
+    background: #f0f0f0;
+}
+
+/* Mobile fixes */
+@media (max-width: 768px) {
+    .navbar {
+        padding: 1rem !important;
+    }
+
+    .connect-grid {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+    }
+
+    .connect-grid a {
+        font-size: 22px;
+        padding: 24px;
+    }
+}
+
+
+/* HERO FULL SCREEN */
+#hero {
+    min-height: 50vh;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.v2-text-hero {
+    font-size: clamp(32px, 6vw, 52px);
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+
+
+/* HERO CENTERING */
+.hero-center {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 10.5rem;
+}
+
+/* SCROLL INDICATOR */
+.hero-scroll {
+    padding-bottom: 2rem;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .hero-center {
+        padding: 0 1rem;
+    }
+
+    .hero-scroll video {
+        width: 56px;
+    }
+}
+
+
+
+
+/* ANIMATION */
+
+/* GLOBAL PAGE FADE */
+body {
+    animation: pageFade 0.6s ease-out;
+}
+
+@keyframes pageFade {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+
+
+
+/* SCROLL REVEAL */
+.reveal {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+
+
+
+
+/* LINK HOVER */
+a {
+    transition: color 0.2s ease, opacity 0.2s ease;
+}
+
+a:hover {
+    opacity: 0.8;
+}
+
+
+
+
+
+
+
+.ha-bg-black {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.ha-bg-black:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+
+
+
+
+
+
+.card:hover {
+    transform: translateY(-4px);
+}
+
+
+
+
+
+
+
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation: none !important;
+        transition: none !important;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation: none !important;
+        transition: none !important;
+    }
+}
