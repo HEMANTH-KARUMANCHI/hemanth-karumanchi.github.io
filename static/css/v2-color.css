@@ -1,21 +1,37 @@
-/* Primary CTA */
-.ha-bg-black {
-    background-color: #111827;
-    color: #ffffff;
-    opacity: 1;
-    visibility: visible;
-}
+:root {
+    --bg: #f6f8fc;
+    --surface: #ffffff;
+    --surface-soft: #eef3fa;
 
-.ha-bg-black:hover {
-    background-color: #000000;
-}
+    --text: #101522;
+    --muted: #5d6879;
+    --line: #dce3ed;
 
-/* Pointer helper */
-.pointer {
-    cursor: pointer;
-}
+    --dark: #0c1220;
+    --dark-muted: #aab5c7;
 
-/* Connect links */
-.connect-grid a {
-    color: #000000;
+    --accent: #2563eb;
+    --accent-dark: #1747b0;
+    --accent-light: #dbeafe;
+
+    --cyan: #06b6d4;
+    --purple: #7c3aed;
+
+    --gradient: linear-gradient(
+        135deg,
+        #2563eb 0%,
+        #4f46e5 55%,
+        #06b6d4 100%
+    );
+
+    --gradient-soft: linear-gradient(
+        135deg,
+        rgba(37, 99, 235, 0.10),
+        rgba(6, 182, 212, 0.07),
+        rgba(124, 58, 237, 0.06)
+    );
+
+    --shadow-sm: 0 4px 16px rgba(15, 23, 42, 0.05);
+    --shadow-md: 0 15px 40px rgba(15, 23, 42, 0.08);
+    --shadow-lg: 0 25px 70px rgba(15, 23, 42, 0.12);
 }

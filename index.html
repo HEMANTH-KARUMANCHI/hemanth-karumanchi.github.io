@@ -2,273 +2,309 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <title>Karumanchi Hemanth.portfolio</title>
-    <meta name="description" content="Karumanchi Hemanth | Machine Learning Engineer | AI & Data Science">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Karumanchi Hemanth — AI & Machine Learning Engineer building practical, data-driven applications.">
+    <meta name="theme-color" content="#f7f8fa">
+    <title>Karumanchi Hemanth | AI & Machine Learning Engineer</title>
 
     <link rel="shortcut icon" href="https://res.cloudinary.com/weetan/image/upload/v1737097162/Personal%20Site/v2-icon_ivfrix.svg">
-
-    <!-- Bootstrap -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css">
-
-    <!-- Animate CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
-
-    <!-- Custom CSS (RELATIVE PATHS) -->
     <link rel="stylesheet" href="./static/css/v2-style.css">
     <link rel="stylesheet" href="./static/css/v2-color.css">
     <link rel="stylesheet" href="./static/css/v2-font.css">
-
-    <link href="https://fonts.cdnfonts.com/css/inter" rel="stylesheet">
 </head>
 
-<body class="animate__animated animate__fadeIn animate__delay-0.7s">
+<body>
+    <header class="site-header" id="top">
+        <nav class="navbar container" aria-label="Main navigation">
+            <a class="brand" href="#home" aria-label="Karumanchi Hemanth home">
+                <span class="brand-mark">KH</span>
+                <span class="brand-name"><b>Karumanchi Hemanth</b></span>
+            </a>
 
-<section id="hero" class="reve ha-bg-white vh-100 d-flex flex-column">
+            <div class="nav-links" id="navLinks">
+                <a href="#about">About</a>
+                <a href="#skills">Skills</a>
+                <a href="#projects">Projects</a>
+                <a href="#contact">Contact</a>
+            </div>
 
-    <nav class="navbar p-5">
-        <span class="navbar-brand">
-            <img src="https://res.cloudinary.com/weetan/image/upload/v1737097162/Personal%20Site/v2-icon_ivfrix.svg">
-        </span>
-        <a onclick="openConnect()"
-           class="py-3 px-4 ha-bg-black rounded text-light text-decoration-none pointer">
-           Connect
-        </a>
-    </nav>
+            <div class="nav-actions">
+                <a class="button button-dark button-small" href="https://drive.google.com/file/d/1nY-VMNo-kCbclhwUHqJaaWvptDf3Szpv/view?usp=sharing" target="_blank" rel="noopener">Resume</a>
+                <button class="menu-toggle" id="menuToggle" aria-label="Open navigation" aria-expanded="false" aria-controls="navLinks">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </nav>
+    </header>
 
-    <!-- HERO CONTENT -->
-    <section id="hero" class="mt-5 mb-5 p-5 text-center">
->
+    <main>
+        <section class="hero section" id="home">
+            <div class="container hero-grid">
+                <div class="hero-copy reveal">
+                    <p class="eyebrow">AI · MACHINE LEARNING · DATA</p>
+                    <h1>Building useful AI systems with a strong software foundation.</h1>
+                    <p class="hero-text">
+                        I'm Hemanth, a Computer Science graduate focused on Machine Learning,
+                        Generative AI and data-driven applications. I enjoy turning ideas into
+                        practical, usable software.
+                    </p>
+                    <div class="hero-actions">
+                        <a class="button button-dark" href="#projects">View my work <span>↘</span></a>
+                        <a class="button button-light" href="https://www.linkedin.com/in/hemanth-karumanchi-a1266022a/" target="_blank" rel="noopener">Let's connect</a>
+                    </div>
+                    <div class="hero-meta">
+                        <span><i class="status-dot"></i><b>Open to opportunities</b></span>
+                        <span></span><b>Hyderabad, Telangana, India</b></span>
+                    </div>
+                </div>
 
-    <nav class="navbar p-5">
-    
-    </nav>
+                <div class="hero-card reveal reveal-delay">
+                    <div class="card-topline">
+                        <span>Currently focused on</span>
+                        <span>01</span>
+                    </div>
+                    <div class="focus-list">
+                        <div><span>01</span><strong>Machine Learning</strong></div>
+                        <div><span>02</span><strong>Generative AI</strong></div>
+                        <div><span>03</span><strong>Python Engineering</strong></div>
+                        <div><span>04</span><strong>APIs & Deployment</strong></div>
+                    </div>
+                    <div class="card-note">Learning continuously. Building deliberately.</div>
+                </div>
+            </div>
+            <a class="scroll-cue" href="#about" aria-label="Scroll to about section"><span>Scroll</span><span class="scroll-line"></span></a>
+        </section>
 
-    <!-- HERO CENTER CONTENT -->
-<div class="hero-center">
-    <span class="v2-text-hero"><b>KARUMANCHI HEMANTH</b></span>
-<br>
-    <span class="v2-text-hero-subtitle mt-2">
-        <b>MACHINE LEARNING ENGINEER · AI & DATA SCIENCE</b>
-    </span><br>
-
-
-    <span class="v2-text-hero-desc mt-3">
-        I'm Hemanth, a 2024 Computer Science graduate focused on building
-        end-to-end Machine Learning systems and data-driven applications.
-    </span>
-</div>
-
-<!-- SCROLL INDICATOR -->
-<div class="hero-scroll">
-    <span class="v2-text-hero-scroll">scroll down</span>
-    <span class="mt-2 pointer" onclick="scrollToSection('projects')">
-        <video autoplay loop muted width="72">
-            <source src="https://res.cloudinary.com/weetan/video/upload/v1737170594/Personal%20Site/arrow-animated_cbukwc.webm">
-        </video>
-    </span>
-</div>
-
-</section>
-
-
-<!-- PROJECTS -->
-<section id="projects" class="d-flex flex-column align-items-center ha-bg-light vh-100">
-    <div class="flex-grow-1 d-flex flex-column align-items-center text-center p-5">
-        <span class="v2-text-project-title">PINNED PROJECTS</span>
-        <span class="v2-text-project-subtitle mt-2">
-            A selection of my most relevant Machine Learning and Data projects.
-        </span>
-    </div>
-
-    <div class="w-100 p-5">
-        <div class="row">
-
-            <!-- AI Resume & Interview Copilot -->
-            <div class="col-12 col-md-4 mb-3 d-flex">
-                <div class="card h-100 w-100">
-                    <div class="card-body d-flex flex-column">
-                        <h5 class="card-title">
-                            <a class="text-dark" target="_blank"
-                               href="https://github.com/HEMANTH-KARUMANCHI/AI-Resume-Interview-Copilot">
-                                AI Resume & Interview Copilot
-                            </a>
-                        </h5>
-                        <p class="card-text">
-                            An AI-powered career assistant that analyzes resumes against job descriptions, identifies skill gaps, calculates match scores, and generates AI-powered recommendations to improve job readiness.
-                        </p>
-                        <div class="mt-auto">
-                            <span class="badge badge-dark">#GEN AI</span>
-                            <span class="badge badge-dark">#NLP</span>
-                        </div>
+        <section class="section section-white" id="about">
+            <div class="container split-layout">
+                <div class="section-heading reveal">
+                    <p class="eyebrow">01 / ABOUT</p>
+                    <h2>A developer growing from ML models into complete products.</h2>
+                </div>
+                <div class="section-content reveal reveal-delay">
+                    <p class="lead">
+                        My core interest is Artificial Intelligence, especially Machine Learning,
+                        Deep Learning, NLP and Generative AI. Alongside model development, I'm
+                        strengthening the engineering skills needed to build reliable applications around them.
+                    </p>
+                    <p>
+                        My projects range from computer vision and predictive ML to GenAI-powered
+                        applications and analytics dashboards. I value clear code, useful interfaces,
+                        and understanding how a system works from data to deployment.
+                    </p>
+                    <div class="about-facts">
+                        <div><strong>2024</strong><span>Computer Science graduate</span></div>
+                        <div><strong>Python</strong><span>Primary development language</span></div>
+                        <div><strong>AI / ML</strong><span>Primary area of focus</span></div>
                     </div>
                 </div>
             </div>
+        </section>
 
-
-            <!-- Brain Tumor -->
-            <div class="col-12 col-md-4 mb-3 d-flex">
-                <div class="card h-100 w-100">
-                    <div class="card-body d-flex flex-column">
-                        <h5 class="card-title">
-                            <a class="text-dark" target="_blank"
-                               href="https://github.com/HEMANTH-KARUMANCHI/Brain_Tumor_Classification">
-                                Brain Tumor Classification
-                            </a>
-                        </h5>
-                        <p class="card-text">
-                            Deep learning-based image classification system for detecting
-                            brain tumors from MRI scans using CNN architectures.
-                        </p>
-                        <div class="mt-auto">
-                            <span class="badge badge-dark">#deep-learning</span>
-                            <span class="badge badge-dark">#computer-vision</span>
-                        </div>
-                    </div>
+        <section class="section section-muted" id="skills">
+            <div class="container">
+                <div class="section-intro reveal">
+                    <p class="eyebrow">02 / SKILLS</p>
+                    <h2>Tools I use to turn ideas into working systems.</h2>
+                </div>
+                <div class="skills-grid">
+                    <article class="skill-group reveal">
+                        <span class="skill-number">01</span>
+                        <h3>AI & Machine Learning</h3>
+                        <p>Machine Learning, Deep Learning, NLP, Generative AI, Computer Vision, model evaluation and explainability.</p>
+                        <div class="tag-list"><span>scikit-learn</span><span>TensorFlow</span><span>LightGBM</span><span>YOLOv8</span></div>
+                    </article>
+                    <article class="skill-group reveal reveal-delay">
+                        <span class="skill-number">02</span>
+                        <h3>Programming & Data</h3>
+                        <p>Python-first development with practical experience working with structured data and analytical workflows.</p>
+                        <div class="tag-list"><span>Python</span><span>C++</span><span>Java</span><span>NumPy</span><span>Pandas</span><span>PySpark</span></div>
+                    </article>
+                    <article class="skill-group reveal">
+                        <span class="skill-number">03</span>
+                        <h3>Application Engineering</h3>
+                        <p>Building the software layer around AI systems and continuing to deepen backend, API and deployment skills.</p>
+                        <div class="tag-list"><span>REST APIs</span><span>FastAPI</span><span>Streamlit</span><span>Git</span><span>GitHub</span><span>Deployment</span></div>
+                    </article>
                 </div>
             </div>
+        </section>
 
-            <!-- Smart Helmet -->
-            <div class="col-12 col-md-4 mb-3 d-flex">
-                <div class="card h-100 w-100">
-                    <div class="card-body d-flex flex-column">
-                        <h5 class="card-title">
-                            <a class="text-dark" target="_blank"
-                               href="https://github.com/HEMANTH-KARUMANCHI/Smart-Helmet-Enforcement-System">
-                                Smart Helmet Enforcement System
-                            </a>
-                        </h5>
-                        <p class="card-text">
-                            Computer vision system to detect helmet usage in traffic
-                            surveillance using object detection techniques.
-                        </p>
-                        <div class="mt-auto">
-                            <span class="badge badge-dark">#computer-vision</span>
-                            <span class="badge badge-dark">#object-detection</span>
-                        </div>
+        <section class="section section-white" id="projects">
+            <div class="container">
+                <div class="projects-header reveal">
+                    <div>
+                        <p class="eyebrow">03 / SELECTED WORK</p>
+                        <h2>Projects that show how I think and build.</h2>
                     </div>
+                        <a
+                            href="YOUR_GITHUB_URL"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="github-profile-btn"
+                        >
+                            <span class="github-icon">⌘</span>
+                            <span>View GitHub Profile</span>
+                            <span class="github-arrow">↗</span>
+                        </a>
+                </div>
+
+                <div class="project-list">
+                    <article class="project-card featured reveal">
+                        <div class="project-index">01</div>
+                        <div class="project-main">
+                            <p class="project-type">GENERATIVE AI · NLP</p>
+                            <h3>AI Resume & Interview Copilot</h3>
+                            <p>Analyzes resumes against job descriptions, identifies skill gaps, calculates match scores, and generates personalized recommendations, learning roadmaps and interview guidance.</p>
+                            <div class="tag-list"><span>GenAI</span><span>NLP</span><span>Streamlit</span></div>
+                        </div>
+                        <div class="project-links">
+                                <a
+                                    href="https://github.com/HEMANTH-KARUMANCHI/AI-Resume-Interview-Copilot"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    class="project-github"
+                                >
+                                    <span>GitHub</span>
+                                    <span>↗</span>
+                                </a>
+
+                                <a
+                                    href="https://ai-resume-interview-copilot-ogdm8kkisoze6tpnj3hypn.streamlit.app/"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    class="project-demo"
+                                >
+                                    Live Demo
+                                    <span>↗</span>
+                                </a>
+
+                             </div>
+                    </article>
+
+                    <article class="project-card reveal">
+                        <div class="project-index">03</div>
+                        <div class="project-main"><p class="project-type">COMPUTER VISION · OBJECT DETECTION</p><h3>Smart Helmet Enforcement System</h3><p>Computer vision system designed to detect helmet usage in traffic surveillance using object detection techniques.</p><div class="tag-list"><span>YOLOv8</span><span>Computer Vision</span></div></div>
+                        <div class="project-links">
+                            <a
+                                href="https://github.com/HEMANTH-KARUMANCHI/Smart-Helmet-Enforcement-System"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                class="project-github"
+                            >
+                                <span>GitHub</span>
+                                <span>↗</span>
+                            </a>
+                        </div>
+                    </article>
+
+                    <article class="project-card reveal">
+                        <div class="project-index">02</div>
+                        <div class="project-main"><p class="project-type">DEEP LEARNING · COMPUTER VISION</p><h3>Brain Tumor Classification</h3><p>Deep learning-based image classification system for detecting brain tumors from MRI scans using CNN architectures.</p><div class="tag-list"><span>Deep Learning</span><span>Computer Vision</span></div></div>
+                        <div class="project-links">
+                            <a
+                                href="https://github.com/HEMANTH-KARUMANCHI/Brain_Tumor_Classification"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                class="project-github"
+                            >
+                                <span>GitHub</span>
+                                <span>↗</span>
+                            </a>
+                        </div>
+                    </article>
+
+                    <article class="project-card reveal">
+                        <div class="project-index">05</div>
+                        <div class="project-main"><p class="project-type">GENERATIVE AI · CHATBOT</p><h3>AI Career Advisor Chatbot</h3><p>AI-powered chatbot created to provide personalized career guidance and practical advice.</p><div class="tag-list"><span>AI</span><span>Chatbot</span></div></div>
+                        <div class="project-links">
+                            <a
+                                href="https://github.com/HEMANTH-KARUMANCHI/AI-Career-Advisor-Chatbot"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                class="project-github"
+                            >
+                                <span>GitHub</span>
+                                <span>↗</span>
+                            </a>
+                        </div>
+                    </article>
+
+                    <article class="project-card reveal">
+                        <div class="project-index">04</div>
+                        <div class="project-main"><p class="project-type">MACHINE LEARNING</p><h3>Diabetes Predictor App</h3><p>End-to-end ML pipeline for predicting diabetes risk from clinical data, including an application deployment layer.</p><div class="tag-list"><span>Machine Learning</span><span>Healthcare AI</span></div></div>
+                        <div class="project-links">
+                            <a
+                                href="https://github.com/HEMANTH-KARUMANCHI/Daibetes_Predictor_App"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                class="project-github"
+                            >
+                                <span>GitHub</span>
+                                <span>↗</span>
+                            </a>
+                        </div>
+                    </article>
+
+                    <article class="project-card reveal">
+                        <div class="project-index">06</div>
+                        <div class="project-main"><p class="project-type">DATA ANALYSIS</p><h3>E-commerce Data Analysis</h3><p>Exploratory data analysis focused on customer behavior, sales trends and actionable business insights.</p><div class="tag-list"><span>Data Analysis</span><span>Pandas</span></div></div>
+                        <div class="project-links">
+                            <a
+                                href="https://github.com/HEMANTH-KARUMANCHI/Ecommerce-Data-Analysis"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                class="project-github"
+                            >
+                                <span>GitHub</span>
+                                <span>↗</span>
+                            </a>
+                        </div>
+                    </article>
+
+                    <article class="project-card reveal">
+                        <div class="project-index">07</div>
+                        <div class="project-main"><p class="project-type">ETL · DASHBOARD</p><h3>Students ETL Dashboard</h3><p>ETL pipeline and analytics dashboard for processing student data and visualizing performance.</p><div class="tag-list"><span>ETL</span><span>Dashboard</span></div></div>
+                        <div class="project-links">
+                            <a
+                                href="https://github.com/HEMANTH-KARUMANCHI/Student_ETL_Dashboard"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                class="project-github"
+                            >
+                                <span>GitHub</span>
+                                <span>↗</span>
+                            </a>
+                        </div>
+                    </article>
                 </div>
             </div>
+        </section>
 
-            <!-- Diabetes -->
-            <div class="col-12 col-md-4 mb-3 d-flex">
-                <div class="card h-100 w-100">
-                    <div class="card-body d-flex flex-column">
-                        <h5 class="card-title">
-                            <a class="text-dark" target="_blank"
-                               href="https://github.com/HEMANTH-KARUMANCHI/Daibetes_Predictor_App">
-                                Diabetes Predictor App
-                            </a>
-                        </h5>
-                        <p class="card-text">
-                            End-to-end ML pipeline for predicting diabetes risk
-                            using clinical data, including deployment.
-                        </p>
-                        <div class="mt-auto">
-                            <span class="badge badge-dark">#machine-learning</span>
-                            <span class="badge badge-dark">#healthcare-ai</span>
-                        </div>
-                    </div>
+        <section class="section section-dark" id="contact">
+            <div class="container contact-layout">
+                <div class="reveal">
+                    <p class="eyebrow eyebrow-light">04 / CONTACT</p>
+                    <h2>Have a project, opportunity, or idea?</h2>
+                    <p class="contact-text">I'm always interested in conversations around AI, software engineering and opportunities to build useful technology.</p>
+                </div>
+                <div class="contact-links reveal reveal-delay">
+                    <a href="https://drive.google.com/file/d/1gauky8aPU1AIQPtwMmzcuF5xhonXQHAn/view?usp=sharing" target="_blank" rel="noopener"><span>Resume</span><strong>↗</strong></a>
+                    <a href="https://www.linkedin.com/in/hemanth-karumanchi-a1266022a/" target="_blank" rel="noopener"><span>LinkedIn</span><strong>↗</strong></a>
+                    <a href="https://github.com/HEMANTH-KARUMANCHI" target="_blank" rel="noopener"><span>GitHub</span><strong>↗</strong></a>
+                    <a href="https://www.kaggle.com/hemanthkarumanchi08" target="_blank" rel="noopener"><span>Kaggle</span><strong>↗</strong></a>
                 </div>
             </div>
+        </section>
+    </main>
 
-            <!-- Career Advisor -->
-            <div class="col-12 col-md-4 mb-3 d-flex">
-                <div class="card h-100 w-100">
-                    <div class="card-body d-flex flex-column">
-                        <h5 class="card-title">
-                            <a class="text-dark" target="_blank"
-                               href="https://github.com/HEMANTH-KARUMANCHI/AI-Career-Advisor-Chatbot">
-                                AI Career Advisor Chatbot
-                            </a>
-                        </h5>
-                        <p class="card-text">
-                            AI-powered chatbot to provide career guidance and advice.
-                        </p>
-                        <div class="mt-auto">
-                            <span class="badge badge-dark">#ai</span>
-                            <span class="badge badge-dark">#chatbot</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Ecommerce -->
-            <div class="col-12 col-md-4 mb-3 d-flex">
-                <div class="card h-100 w-100">
-                    <div class="card-body d-flex flex-column">
-                        <h5 class="card-title">
-                            <a class="text-dark" target="_blank"
-                               href="https://github.com/HEMANTH-KARUMANCHI/Ecommerce-Data-Analysis">
-                                E-commerce Data Analysis
-                            </a>
-                        </h5>
-                        <p class="card-text">
-                            Exploratory data analysis to uncover customer behavior,
-                            sales trends, and insights.
-                        </p>
-                        <div class="mt-auto">
-                            <span class="badge badge-dark">#data-analysis</span>
-                            <span class="badge badge-dark">#pandas</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- ETL -->
-            <div class="col-12 col-md-4 mb-3 d-flex">
-                <div class="card h-100 w-100">
-                    <div class="card-body d-flex flex-column">
-                        <h5 class="card-title">
-                            <a class="text-dark" target="_blank"
-                               href="https://github.com/HEMANTH-KARUMANCHI/Student_ETL_Dashboard">
-                                Students ETL Dashboard
-                            </a>
-                        </h5>
-                        <p class="card-text">
-                            ETL pipeline and analytics dashboard for processing
-                            student data and visualizing performance.
-                        </p>
-                        <div class="mt-auto">
-                            <span class="badge badge-dark">#etl</span>
-                            <span class="badge badge-dark">#dashboard</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <span>© <span id="year"></span> Hemanth Karumanchi</span>
+            <a href="#top">Back to top ↑</a>
         </div>
-    </div>
-</section>
+    </footer>
 
-
-<!-- CONNECT OVERLAY -->
-<div id="connectOverlay" class="connect-overlay d-none">
-    <div class="connect-grid">
-        <a href="#hero" onclick="closeConnect()">Home</a>
-        <a href="https://drive.google.com/file/d/1w4I3aHV-eNMz3ArNTJbr72ccwB4tJHRA/view?usp=sharing" target="_blank">Resume</a>
-        <a href="https://www.linkedin.com/in/hemanth-karumanchi-a1266022a/" target="_blank">LinkedIn</a>
-        <a href="https://github.com/HEMANTH-KARUMANCHI" target="_blank">Github</a>
-        <a href="https://www.kaggle.com/hemanthkarumanchi08" target="_blank">Kaggle</a>
-    </div>
-</div>
-
-<script>
-function scrollToSection(id) {
-    document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
-}
-function openConnect() {
-    document.getElementById("connectOverlay").classList.remove("d-none");
-}
-function closeConnect() {
-    document.getElementById("connectOverlay").classList.add("d-none");
-}
-document.addEventListener("keydown", e => {
-    if (e.key === "Escape") closeConnect();
-});
-</script>
-
+    <script src="./static/js/main.js"></script>
 </body>
 </html>
