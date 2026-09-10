@@ -1,0 +1,19 @@
+{
+  "name": "portfolio",
+  "version": "2.0.0",
+  "description": "Karumanchi Hemanth — AI/ML Engineer Portfolio",
+  "type": "module",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "postbuild": "node -e \"import fs from 'fs'; fs.cpSync('dist/index.html', 'index.html'); fs.cpSync('dist/_astro', '_astro', {recursive: true});\"",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@astrojs/tailwind": "^6.0.2",
+    "astro": "^5.18.2",
+    "tailwindcss": "^3.4.17"
+  }
+}

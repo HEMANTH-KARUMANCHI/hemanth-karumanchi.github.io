@@ -1,0 +1,121 @@
+---
+import { personalDetails } from '../data/portfolioData';
+
+const highlights = [
+  {
+    icon: 'sparkles',
+    title: 'GenAI & RAG Architectures',
+    description: 'Ingestion, vector indexing with Pinecone, recursive chunking, LangChain workflows, and Gemini LLM integrations.'
+  },
+  {
+    icon: 'eye',
+    title: 'Computer Vision & Deep Learning',
+    description: 'Custom YOLOv8 detection pipelines, OpenCV video analytics, MobileNetV2 transfer learning, and PyTorch/TensorFlow models.'
+  },
+  {
+    icon: 'server',
+    title: 'Backend & Production MLOps',
+    description: 'FastAPI REST APIs, Django backend services, PostgreSQL database schema, JWT auth, and containerized Docker deployments.'
+  },
+  {
+    icon: 'academic',
+    title: 'GATE DA 2026 Qualified',
+    description: 'Strong foundation in Data Structures, Algorithms, Statistics, Machine Learning, DBMS, and Linear Algebra.'
+  }
+];
+---
+
+<section id="about" class="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto border-t border-slate-200/80 dark:border-slate-800/80">
+  <div class="space-y-12">
+    
+    <!-- Section Header -->
+    <div class="text-center max-w-3xl mx-auto space-y-4">
+      <h2 class="text-xs font-bold uppercase tracking-widest text-blue-600 dark:text-blue-400">
+        About Me
+      </h2>
+      <p class="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white tracking-tight">
+        Engineering AI Solutions from Concept to Deployment
+      </p>
+      <div class="w-12 h-1 bg-blue-600 dark:bg-blue-500 mx-auto rounded-full"></div>
+    </div>
+
+    <!-- Main About Content Grid -->
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+      
+      <!-- Bio Text Side (7 cols) -->
+      <div class="lg:col-span-7 space-y-6 text-slate-600 dark:text-slate-300 text-base sm:text-lg leading-relaxed">
+        <p>
+          Hi, I'm <strong class="text-slate-900 dark:text-white font-semibold">Karumanchi Hemanth</strong>, an AI/ML Engineer based in Hyderabad, Telangana. I specialize in building end-to-end Machine Learning systems, Generative AI applications, and Computer Vision solutions that solve tangible real-world problems.
+        </p>
+
+        <p>
+          I hold a B.Tech in Computer Science & Engineering (8.1 CGPA) from Aditya Engineering College and qualified <strong class="text-blue-600 dark:text-blue-400 font-semibold">GATE Data Science & Artificial Intelligence (DA) 2026</strong>. My professional background includes working as an AI/ML Intern at <strong class="text-slate-900 dark:text-white font-semibold">Infosys Springboard</strong>, where I developed machine learning predictive workflows and risk assessment models for healthcare applications.
+        </p>
+
+        <p>
+          I am passionate about creating reliable, production-oriented AI infrastructure—combining high-accuracy ML models with clean FastAPI backends, PostgreSQL databases, Docker containerization, and Streamlit/React frontend interfaces.
+        </p>
+
+        <!-- Quick Specs List -->
+        <div class="pt-4 grid grid-cols-2 gap-4 text-sm font-medium border-t border-slate-200 dark:border-slate-800">
+          <div>
+            <span class="text-slate-400 dark:text-slate-500 uppercase text-xs tracking-wider block">Location</span>
+            <span class="text-slate-800 dark:text-slate-200">{personalDetails.location}</span>
+          </div>
+          <div>
+            <span class="text-slate-400 dark:text-slate-500 uppercase text-xs tracking-wider block">Email</span>
+            <a href={`mailto:${personalDetails.email}`} class="text-blue-600 dark:text-blue-400 hover:underline">{personalDetails.email}</a>
+          </div>
+          <div>
+            <span class="text-slate-400 dark:text-slate-500 uppercase text-xs tracking-wider block">Degree</span>
+            <span class="text-slate-800 dark:text-slate-200">B.Tech CSE (2020 – 2024)</span>
+          </div>
+          <div>
+            <span class="text-slate-400 dark:text-slate-500 uppercase text-xs tracking-wider block">Status</span>
+            <span class="text-emerald-600 dark:text-emerald-400 font-semibold">Open to AI/ML Opportunities</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Highlight Cards Grid Side (5 cols) -->
+      <div class="lg:col-span-5 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 gap-4">
+        {highlights.map(item => (
+          <div class="p-5 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800/80 shadow-sm hover:shadow-md hover:border-blue-500/50 dark:hover:border-blue-500/50 transition-all duration-200 space-y-2">
+            <div class="w-10 h-10 rounded-xl bg-blue-50 dark:bg-blue-950/60 text-blue-600 dark:text-blue-400 flex items-center justify-center font-bold">
+              {item.icon === 'sparkles' && (
+                <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
+                </svg>
+              )}
+              {item.icon === 'eye' && (
+                <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+                </svg>
+              )}
+              {item.icon === 'server' && (
+                <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2m-2-4h.01M17 16h.01" />
+                </svg>
+              )}
+              {item.icon === 'academic' && (
+                <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5z" />
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0112 20.055a11.952 11.952 0 01-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z" />
+                </svg>
+              )}
+            </div>
+            <h3 class="text-base font-bold text-slate-900 dark:text-white">
+              {item.title}
+            </h3>
+            <p class="text-xs sm:text-sm text-slate-500 dark:text-slate-400 leading-normal">
+              {item.description}
+            </p>
+          </div>
+        ))}
+      </div>
+
+    </div>
+
+  </div>
+</section>

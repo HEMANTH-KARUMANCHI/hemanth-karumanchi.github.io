@@ -1,0 +1,115 @@
+---
+import { educationList, certifications } from '../data/portfolioData';
+---
+
+<section id="education" class="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto border-t border-slate-200/80 dark:border-slate-800/80">
+  <div class="space-y-12">
+    
+    <!-- Section Header -->
+    <div class="text-center max-w-3xl mx-auto space-y-4">
+      <h2 class="text-xs font-bold uppercase tracking-widest text-blue-600 dark:text-blue-400">
+        Academic Profile
+      </h2>
+      <p class="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white tracking-tight">
+        Education & Certifications
+      </p>
+      <div class="w-12 h-1 bg-blue-600 dark:bg-blue-500 mx-auto rounded-full"></div>
+    </div>
+
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+      
+      <!-- Education Side (7 cols) -->
+      <div class="lg:col-span-7 space-y-6">
+        <h3 class="text-lg font-bold text-slate-900 dark:text-white flex items-center gap-2">
+          <svg class="w-5 h-5 text-blue-600 dark:text-blue-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5z" />
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0112 20.055a11.952 11.952 0 01-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z" />
+          </svg>
+          Academic Degree
+        </h3>
+
+        {educationList.map(edu => (
+          <div class="p-6 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800/80 shadow-sm space-y-4">
+            <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 border-b border-slate-100 dark:border-slate-800 pb-3">
+              <div>
+                <h4 class="text-xl font-extrabold text-slate-900 dark:text-white">
+                  {edu.degree}
+                </h4>
+                <p class="text-sm font-semibold text-blue-600 dark:text-blue-400 mt-1">
+                  {edu.institution}
+                </p>
+              </div>
+
+              <div class="text-right">
+                <span class="inline-block px-3 py-1 rounded-full text-xs font-bold bg-blue-100 text-blue-800 dark:bg-blue-950 dark:text-blue-300">
+                  {edu.grade}
+                </span>
+                <span class="block text-xs text-slate-400 dark:text-slate-500 mt-1">{edu.period}</span>
+              </div>
+            </div>
+
+            <!-- GATE DA Qualified Banner -->
+            <div class="p-4 rounded-xl bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-blue-950/50 dark:to-indigo-950/50 border border-blue-200/80 dark:border-blue-800/60 flex items-center gap-3">
+              <div class="w-9 h-9 rounded-lg bg-blue-600 text-white flex items-center justify-center font-bold text-sm shrink-0">
+                ★
+              </div>
+              <div>
+                <span class="text-xs font-bold uppercase tracking-wider text-blue-700 dark:text-blue-300 block">National Achievement</span>
+                <p class="text-sm font-bold text-slate-900 dark:text-white">
+                  Qualified GATE Data Science & Artificial Intelligence (DA) 2026
+                </p>
+              </div>
+            </div>
+
+            {edu.highlights && (
+              <ul class="space-y-1.5 text-xs sm:text-sm text-slate-600 dark:text-slate-300 pt-2">
+                {edu.highlights.map(h => (
+                  <li class="flex items-start gap-2">
+                    <span class="text-blue-500">✓</span>
+                    <span>{h}</span>
+                  </li>
+                ))}
+              </ul>
+            )}
+          </div>
+        ))}
+      </div>
+
+      <!-- Certifications Side (5 cols) -->
+      <div class="lg:col-span-5 space-y-6">
+        <h3 class="text-lg font-bold text-slate-900 dark:text-white flex items-center gap-2">
+          <svg class="w-5 h-5 text-blue-600 dark:text-blue-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
+          </svg>
+          Industry Certifications
+        </h3>
+
+        <div class="space-y-4">
+          {certifications.map(cert => (
+            <div class="p-5 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800/80 shadow-sm hover:shadow-md transition-all duration-200 flex items-center justify-between gap-4">
+              <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-xl bg-blue-50 dark:bg-blue-950/60 text-blue-600 dark:text-blue-400 flex items-center justify-center font-bold text-sm shrink-0">
+                  MS
+                </div>
+                <div>
+                  <h4 class="text-base font-bold text-slate-900 dark:text-white">
+                    {cert.title}
+                  </h4>
+                  <p class="text-xs font-semibold text-slate-500 dark:text-slate-400">
+                    Issuer: {cert.issuer}
+                  </p>
+                </div>
+              </div>
+
+              <span class="px-2.5 py-1 rounded-md text-[11px] font-bold uppercase tracking-wider bg-emerald-100 text-emerald-800 dark:bg-emerald-950/80 dark:text-emerald-300">
+                Verified
+              </span>
+            </div>
+          ))}
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>

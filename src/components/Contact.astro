@@ -1,0 +1,164 @@
+---
+import { personalDetails } from '../data/portfolioData';
+---
+
+<section id="contact" class="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto border-t border-slate-200/80 dark:border-slate-800/80">
+  <div class="space-y-12">
+    
+    <!-- Section Header -->
+    <div class="text-center max-w-3xl mx-auto space-y-4">
+      <h2 class="text-xs font-bold uppercase tracking-widest text-blue-600 dark:text-blue-400">
+        Get In Touch
+      </h2>
+      <p class="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white tracking-tight">
+        Let's Connect & Collaborate
+      </p>
+      <div class="w-12 h-1 bg-blue-600 dark:bg-blue-500 mx-auto rounded-full"></div>
+      <p class="text-slate-600 dark:text-slate-300 text-base max-w-xl mx-auto">
+        Interested in discussing AI/ML engineering roles, Generative AI projects, or technology collaboration? Feel free to reach out directly!
+      </p>
+    </div>
+
+    <!-- Contact Info Cards Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
+      
+      <!-- Email Card -->
+      <div class="p-6 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800/80 shadow-sm hover:shadow-md transition-all duration-200 text-center space-y-3">
+        <div class="w-12 h-12 rounded-xl bg-blue-50 dark:bg-blue-950/60 text-blue-600 dark:text-blue-400 mx-auto flex items-center justify-center font-bold">
+          <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+          </svg>
+        </div>
+        <h3 class="text-base font-bold text-slate-900 dark:text-white">Email Address</h3>
+        <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 font-medium break-all">
+          {personalDetails.email}
+        </p>
+        <div class="pt-2 flex items-center justify-center gap-2">
+          <a 
+            href={`mailto:${personalDetails.email}`}
+            class="px-3 py-1.5 rounded-lg bg-blue-600 hover:bg-blue-700 text-white text-xs font-semibold shadow-xs transition-colors"
+          >
+            Send Mail
+          </a>
+          <button 
+            id="copy-email-btn"
+            data-email={personalDetails.email}
+            class="px-3 py-1.5 rounded-lg bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-300 text-xs font-semibold transition-colors"
+          >
+            Copy
+          </button>
+        </div>
+      </div>
+
+      <!-- Phone Card -->
+      <div class="p-6 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800/80 shadow-sm hover:shadow-md transition-all duration-200 text-center space-y-3">
+        <div class="w-12 h-12 rounded-xl bg-blue-50 dark:bg-blue-950/60 text-blue-600 dark:text-blue-400 mx-auto flex items-center justify-center font-bold">
+          <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+          </svg>
+        </div>
+        <h3 class="text-base font-bold text-slate-900 dark:text-white">Phone & WhatsApp</h3>
+        <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 font-medium">
+          {personalDetails.phone}
+        </p>
+        <div class="pt-2">
+          <a 
+            href={`tel:${personalDetails.phone.replace(/[^0-9+]/g, '')}`}
+            class="inline-block px-3 py-1.5 rounded-lg bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-300 text-xs font-semibold transition-colors"
+          >
+            Call Directly
+          </a>
+        </div>
+      </div>
+
+      <!-- Location Card -->
+      <div class="p-6 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800/80 shadow-sm hover:shadow-md transition-all duration-200 text-center space-y-3">
+        <div class="w-12 h-12 rounded-xl bg-blue-50 dark:bg-blue-950/60 text-blue-600 dark:text-blue-400 mx-auto flex items-center justify-center font-bold">
+          <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+          </svg>
+        </div>
+        <h3 class="text-base font-bold text-slate-900 dark:text-white">Location</h3>
+        <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 font-medium">
+          {personalDetails.location}
+        </p>
+        <div class="pt-2">
+          <span class="inline-block px-3 py-1.5 rounded-lg bg-emerald-50 dark:bg-emerald-950/50 text-emerald-600 dark:text-emerald-400 text-xs font-semibold">
+            Open to Relocation / Remote
+          </span>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Interactive Social Links Bar -->
+    <div class="max-w-2xl mx-auto p-6 rounded-2xl bg-slate-900 text-white shadow-xl text-center space-y-6">
+      <h3 class="text-lg font-bold">Connect Across Platforms</h3>
+      
+      <div class="grid grid-cols-2 sm:grid-cols-4 gap-4">
+        <a 
+          href={personalDetails.github} 
+          target="_blank" 
+          rel="noopener noreferrer"
+          class="p-3 rounded-xl bg-slate-800 hover:bg-slate-700 transition-colors flex flex-col items-center gap-2 group"
+        >
+          <svg class="w-6 h-6 text-slate-300 group-hover:text-white" fill="currentColor" viewBox="0 0 24 24">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" />
+          </svg>
+          <span class="text-xs font-semibold">GitHub</span>
+        </a>
+
+        <a 
+          href={personalDetails.linkedin} 
+          target="_blank" 
+          rel="noopener noreferrer"
+          class="p-3 rounded-xl bg-slate-800 hover:bg-slate-700 transition-colors flex flex-col items-center gap-2 group"
+        >
+          <svg class="w-6 h-6 text-blue-400 group-hover:text-blue-300" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+          </svg>
+          <span class="text-xs font-semibold">LinkedIn</span>
+        </a>
+
+        <a 
+          href={personalDetails.kaggle} 
+          target="_blank" 
+          rel="noopener noreferrer"
+          class="p-3 rounded-xl bg-slate-800 hover:bg-slate-700 transition-colors flex flex-col items-center gap-2 group"
+        >
+          <span class="text-xl font-extrabold text-sky-400 group-hover:text-sky-300">K</span>
+          <span class="text-xs font-semibold">Kaggle</span>
+        </a>
+
+        <a 
+          href={personalDetails.resumeUrl} 
+          target="_blank" 
+          rel="noopener noreferrer"
+          class="p-3 rounded-xl bg-blue-600 hover:bg-blue-500 transition-colors flex flex-col items-center gap-2 group"
+        >
+          <svg class="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+          </svg>
+          <span class="text-xs font-semibold">Resume PDF</span>
+        </a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<script>
+  // Copy Email Script
+  const copyBtn = document.getElementById('copy-email-btn');
+  copyBtn?.addEventListener('click', () => {
+    const email = copyBtn.getAttribute('data-email');
+    if (email) {
+      navigator.clipboard.writeText(email);
+      copyBtn.textContent = 'Copied!';
+      setTimeout(() => {
+        copyBtn.textContent = 'Copy';
+      }, 2000);
+    }
+  });
+</script>
