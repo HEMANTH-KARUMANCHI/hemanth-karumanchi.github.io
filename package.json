@@ -7,7 +7,7 @@
     "dev": "astro dev",
     "start": "astro dev",
     "build": "astro build",
-    "postbuild": "node -e \"import fs from 'fs'; fs.cpSync('dist/index.html', 'index.html'); fs.cpSync('dist/_astro', '_astro', {recursive: true});\"",
+    "postbuild": "node -e \"import fs from 'fs'; fs.writeFileSync('.nojekyll', ''); fs.cpSync('dist/index.html', 'index.html'); fs.cpSync('dist/_astro', '_astro', {recursive: true});\"",
     "preview": "astro preview",
     "astro": "astro"
   },
